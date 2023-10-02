@@ -6,7 +6,8 @@ def square(number):
     :param number: int or float
     :return: int or float, the square of the input number
     """
-    pass  # Implement your solution here
+    square = number**2
+    return square 
 
 
 def reverse_string(s):
@@ -15,15 +16,19 @@ def reverse_string(s):
     :param s: str
     :return: str, the reversed string
     """
-    pass  # Implement your solution here
+    return s[::-1]
 
 def find_maximum(lst):
     """
     This function takes a list of numbers lst and returns the maximum number in the list.
     :param lst: list of int
     :return: int, the maximum number in the list
-    """
-    pass  # Implement your solution here 
+    """ 
+    max_num = lst[0]  
+    for num in lst:
+        if num > max_num:
+            max_num = num
+    return max_num 
 
 def odd_or_even(n):
     """
@@ -31,7 +36,10 @@ def odd_or_even(n):
     :param n: int
     :return: str, "Odd" or "Even"
     """
-    pass  # Implement your solution here
+    if n % 2 == 0:
+        return "Even" 
+    else:
+        return "Odd"
 
 def is_palindrome(s):
     """
@@ -41,8 +49,7 @@ def is_palindrome(s):
     :param s: str
     :return: bool, `True` if the string is a palindrome, `False` otherwise.
     """
-    pass  # Implement your solution here
-
+    return s == s[::-1]
 def calculate_area(shape, *args):
     """
     This function calculates and returns the area of the specified shape based on the provided arguments.
@@ -60,6 +67,23 @@ def calculate_area(shape, *args):
     :raises ValueError: If an unsupported shape is provided or if the number of parameters 
     for the shape is incorrect.
     """
-    pass  # Implement your solution here
+    if shape == "circle":
+        radius = args[0]
+        area = radius**2 * math.pi 
+        return area
+    elif shape == "rectangle":
+        length = args[0]
+        width = args[1]
+        area = length * width
+        return area
+    elif shape == "triangle":
+        base = args[0]
+        height = args[1]
+        area = (base * height)/2
+        return area
+    else:
+        return "not found"
+        
+        
 
 
